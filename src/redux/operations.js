@@ -19,11 +19,11 @@ export const fetchContacts = createAsyncThunk(
 
 export const addContact = createAsyncThunk(
   'contacts/addContact',
-  async ({ name, number }, thunkAPI) => {
+  async ({ name, phone }, thunkAPI) => {
     try {
       const response = await axios.post('/contacts', {
         name,
-        number,
+        phone,
         id: shortid.generate(),
       });
       return response.data;
