@@ -38,6 +38,7 @@ export default function ContactForm() {
 
     reset();
     dispatch(addContact({ name, number }));
+    console.log(number);
   };
 
   const reset = () => {
